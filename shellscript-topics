@@ -62,3 +62,18 @@ bash script.sh 123 xyz
 # $@ / $* - 123 xyz (all arguments)
 # $? - exit status of previous command(it is a number from 0-255)
 
+FUNCTIONS
+
+#Declare a function
+sample() {
+   echo sample function
+}
+
+#Access a function
+sample
+
+#Input to a function
+special variables are applicable to functions, $1,$2..$#,$*,$@,$?
+
+##Exit status of a function is possible by using return command
+# Variable of main program are accessible from function and vice-versa
