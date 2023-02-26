@@ -77,3 +77,10 @@ special variables are applicable to functions, $1,$2..$#,$*,$@,$?
 
 ##Exit status of a function is possible by using return command
 # Variable of main program are accessible from function and vice-versa
+
+CONDITONS
+
+#Two conditional commands
+1.if
+2.case
+
