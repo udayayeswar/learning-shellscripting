@@ -1,0 +1,64 @@
+SHE-BANG & comments
+PRINT
+ echo
+   - colored printing
+   - multiline printing
+
+ex: echo -e "Hellow\nWorld"
+
+Redirectores
+
+If output use >
+If error use 2>
+if both use &>
+If append rather than over write &>>
+If output is not needed then &>/dev/null
+
+Quotes
+
+single Quotes
+ ->no special charecters in single quotes, meaning echo '${a}'will print ${a} as output but not the variable data,since $ is a special charecter to pull variable and no special chatercters are allowed in single quotes
+
+Double qoutes
+ -> very few charecters are special charecters that include $,meaning  variables are accessible over double qoutes
+ -> It is most preferred one
+
+VARIABLES
+
+#-> Declare variable
+ a=10
+ ->access variable
+ $a
+ ->print
+ echo $a
+
+#-> properties of variable
+ -> Read write
+ a=10
+ a=20
+ # to mark as raadonly
+ readonly a
+
+#->Local
+a=10
+bash script.sh (a is not accessible inside script.sh)
+# to mark as env varible
+export a
+bash script.sh (a should be accessible inside script.sh)
+
+#-> command subs
+data=$(date)
+
+#->Arthematic
+add=$((2+3))
+
+SPECIAL VARIABLES ,take input to script using these
+$1,$2, .....$n.$*,$#,$?
+
+bash script.sh 123 xyz
+# $1-123
+# $2-xyz
+# $#- 2(count of number of arguments)
+# $@ / $* - 123 xyz (all arguments)
+# $? - exit status of previous command(it is a number from 0-255)
+
